@@ -19,11 +19,18 @@ header {
 }
 
 header a {
-  display: inline-block;
-  vertical-align: middle;
   text-decoration: none;
   color: grey;
 }
+.header-left a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header-left #logo {
+  width: 100px;
+}
+
 header ul {
   list-style: none;
 }
@@ -33,16 +40,38 @@ header ul li {
   cursor: pointer;
   color: grey;
 }
-
-.header-left img {
-  width: 100px;
+.header-right > ul > li {
+  line-height: 12vh;
 }
 
-.header-right a {
+.header-right #app{
   color: white;
   background-color: rgb(235, 0, 141);
   padding: 12px 25px;
   border-radius: 25px;
+}
+
+.dropdown-on-hover {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 15px;
+  box-shadow: 0 0 7px rgb(230, 230, 230);
+  display: none;
+}
+
+.dropdown li {
+  display: block;
+  line-height: 60px;
+  white-space: nowrap;
 }
 
 i.display-none {
@@ -55,19 +84,4 @@ header a.active {
 
 .black {
   color: black;
-}
-
-.dropdown-on-hover {
-  position: relative;
-}
-.dropdown {
-  position: absolute;
-  top: 50px;
-  left: 33px;
-  transform: translate(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px;
-  box-shadow: 0 0 3px grey;
 }
