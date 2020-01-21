@@ -14,22 +14,12 @@ $(document).ready(function() {
 
   // cala il dropdown sull'hover
   $(".header-right li.dropdown-on-hover").hover(function() {
-    $(this).children(".dropdown").show();
-  }, function() {
-    $(this).children(".dropdown").hide();
+    $(this).children(".dropdown").toggle();
+    $(this).find(".fas").toggleClass("fa-angle-up fa-angle-down");
   });
 
   // apre e chiude il dropdown sul click
   $(".header-right li.dropdown-on-hover").on("click", function() {
     $(this).children(".dropdown").toggle();
-  });
-
-  // alterna la freccina della lingua
-  $("#language").hover(function() {
-    $("#language .fa-angle-down").hide();
-    $("#language .fa-angle-up").show();
-  }, function() {
-    $("#language .fa-angle-up").hide();
-    $("#language .fa-angle-down").show();
   });
 });
