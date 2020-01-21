@@ -6,7 +6,7 @@ $(document).ready(function() {
   });
 
   // evidenzia di nero all'hover
-  $(".header-right li, .header-right li a").hover(function() {
+  $(".header-right li, header li a").hover(function() {
     $(this).addClass("black");
   }, function() {
     $(this).removeClass("black");
