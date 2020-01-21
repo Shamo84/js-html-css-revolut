@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  trovato = false;
   // alterna tra PERSONALE e BUSINESS
   $(".header-left li:not(:first-child) a").on("click", function() {
     $(".header-left a").removeClass("active");
@@ -13,13 +14,14 @@ $(document).ready(function() {
   });
 
   // cala il dropdown sull'hover
-  $(".header-right li.dropdown-on-hover").hover(function() {
-    $(this).children(".dropdown").toggle();
-    $(this).find(".fas").toggleClass("fa-chevron-up fa-chevron-down");
+  $(".header-right li.dropdown-on-hover").mouseenter(function() {
+    $(this).siblings().children(".dropdown").hide();
+    $(this).siblings().children(".fas").removeClass("fa-chevron-up").addClass("fa-chevron-down");
+    $(this).children(".dropdown").show();
+    $(this).children(".fas").removeClass("fa-chevron-down").addClass("fa-chevron-up");
   });
 
-  // apre e chiude il dropdown sul click
-  $(".header-right li.dropdown-on-hover").on("click", function() {
-    $(this).children(".dropdown").toggle();
+  $(document).on("click", function() {
+      $(".dropdown").hide();
   });
 });
