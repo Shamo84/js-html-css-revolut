@@ -41,8 +41,9 @@ header ul li {
   cursor: pointer;
   color: grey;
 }
+
 .header-right > ul > li {
-  line-height: 12vh;
+  padding: 5vh 0;
 }
 
 .header-right #app{
@@ -70,6 +71,19 @@ header ul li {
   display: block;
   line-height: 60px;
   white-space: nowrap;
+}
+
+.fas {
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+header span {
+  color: #EB008D;
+  font-size: 13px;
+  font-weight: 700;
+  position: relative;
+  top: -12px;
 }
 
 i.display-none {

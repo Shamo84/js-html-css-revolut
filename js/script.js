@@ -15,7 +15,7 @@ $(document).ready(function() {
   // cala il dropdown sull'hover
   $(".header-right li.dropdown-on-hover").hover(function() {
     $(this).children(".dropdown").toggle();
-    $(this).find(".fas").toggleClass("fa-angle-up fa-angle-down");
+    $(this).find(".fas").toggleClass("fa-chevron-up fa-chevron-down");
   });
 
   // apre e chiude il dropdown sul click
