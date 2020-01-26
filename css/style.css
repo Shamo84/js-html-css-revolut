@@ -89,6 +89,9 @@ header span {
 .display-none {
   display: none;
 }
+.display-block {
+  display: block;
+}
 
 header a.active {
   color: black;
